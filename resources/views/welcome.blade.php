@@ -49,6 +49,189 @@
                 </nav>
             @endif
         </header>
+
+        <!-- Coverflow Carousel Container -->
+        <div class="w-full max-w-5xl mx-auto py-12 px-4">
+            <div class="relative overflow-visible">
+                <!-- Carousel wrapper with perspective -->
+                <div id="coverflow" class="relative h-80 md:h-96 flex items-center justify-center">
+                    <!-- Item 1 -->
+                    <div class="absolute transition-all duration-500 ease-in-out transform" style="--tw-translate-x: -80%; --tw-translate-z: -100px; --tw-rotate-y: 30deg; --tw-scale: 0.8;" data-carousel-item>
+                        <div class="w-64 h-64 md:w-80 md:h-80 relative overflow-hidden rounded-lg shadow-xl">
+                            <img src="https://th.bing.com/th/id/R.4a95c7896762b205371e700de394f064?rik=C6SdPLmbFLOtXg&riu=http%3a%2f%2fwww.hdwallpaperspulse.com%2fwp-content%2fuploads%2f2017%2f08%2f07%2fawesome-mountain-image-hd.jpg&ehk=plo51Q16KGVBta47OiqQhfZ1ViuHAoSYn3eThIsVhac%3d&risl=&pid=ImgRaw&r=0" class="w-full h-full object-cover" alt="Mountain View 1">
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="absolute transition-all duration-500 ease-in-out transform" style="--tw-translate-x: -40%; --tw-translate-z: -50px; --tw-rotate-y: 15deg; --tw-scale: 0.9;" data-carousel-item>
+                        <div class="w-64 h-64 md:w-80 md:h-80 relative overflow-hidden rounded-lg shadow-xl">
+                            <img src="https://wallpapercave.com/wp/wp3819435.jpg" class="w-full h-full object-cover" alt="Mountain View 2">
+                        </div>
+                    </div>
+                    <!-- Item 3 (Active) -->
+                    <div class="absolute transition-all duration-500 ease-in-out transform z-10" style="--tw-translate-x: 0%; --tw-translate-z: 0; --tw-rotate-y: 0deg; --tw-scale: 1;" data-carousel-item data-active>
+                        <div class="w-72 h-72 md:w-96 md:h-96 relative overflow-hidden rounded-xl shadow-2xl">
+                            <img src="https://wallpapercave.com/wp/wp3819576.jpg" class="w-full h-full object-cover" alt="Mountain View 3">
+                        </div>
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="absolute transition-all duration-500 ease-in-out transform" style="--tw-translate-x: 40%; --tw-translate-z: -50px; --tw-rotate-y: -15deg; --tw-scale: 0.9;" data-carousel-item>
+                        <div class="w-64 h-64 md:w-80 md:h-80 relative overflow-hidden rounded-lg shadow-xl">
+                            <img src="https://th.bing.com/th/id/R.ceea6957d1c99b22714279869cb809a4?rik=FGHyp3CHgHGUOA&riu=http%3a%2f%2fcdn.wallpapersafari.com%2f38%2f71%2f5bcICS.jpg&ehk=vPPtZkWLXaoCQidrRx%2bOup5VPP0yVHBlzuMPD3yzbKM%3d&risl=&pid=ImgRaw&r=0" class="w-full h-full object-cover" alt="Mountain View 4">
+                        </div>
+                    </div>
+                    <!-- Item 5 -->
+                    <div class="absolute transition-all duration-500 ease-in-out transform" style="--tw-translate-x: 80%; --tw-translate-z: -100px; --tw-rotate-y: -30deg; --tw-scale: 0.8;" data-carousel-item>
+                        <div class="w-64 h-64 md:w-80 md:h-80 relative overflow-hidden rounded-lg shadow-xl">
+                            <img src="https://th.bing.com/th/id/R.6650bf65769f95fb926de700d0c7a71a?rik=dd4o6KD5SAOmnA&riu=http%3a%2f%2fhdqwalls.com%2fwallpapers%2fmountain-peaks-beautiful-scenery.jpg&ehk=chKwLdBYLFkVcRCxZP1R%2fL8%2fDTW9lhnfB4TL9xEBe%2f4%3d&risl=1&pid=ImgRaw&r=0" class="w-full h-full object-cover" alt="Mountain View 5">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Navigation Buttons -->
+                <button type="button" class="absolute top-1/2 left-4 z-20 flex items-center justify-center w-12 h-12 bg-black/30 hover:bg-black/50 rounded-full text-white transition-colors duration-200" data-carousel-prev>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                    <span class="sr-only">Previous</span>
+                </button>
+                <button type="button" class="absolute top-1/2 right-4 z-20 flex items-center justify-center w-12 h-12 bg-black/30 hover:bg-black/50 rounded-full text-white transition-colors duration-200" data-carousel-next>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                    <span class="sr-only">Next</span>
+                </button>
+            </div>
+            
+            <!-- Indicator Dots -->
+            <div class="flex justify-center mt-6 space-x-2">
+                <button type="button" class="w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-colors" aria-current="true" data-carousel-slide-to="0"></button>
+                <button type="button" class="w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-colors" aria-current="false" data-carousel-slide-to="1"></button>
+                <button type="button" class="w-3 h-3 rounded-full bg-blue-500 hover:bg-blue-600 transition-colors" aria-current="false" data-carousel-slide-to="2"></button>
+                <button type="button" class="w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-colors" aria-current="false" data-carousel-slide-to="3"></button>
+                <button type="button" class="w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-colors" aria-current="false" data-carousel-slide-to="4"></button>
+            </div>
+        </div>
+        
+        <!-- Custom CSS for Coverflow Effect -->
+        <style>
+            #coverflow {
+                perspective: 2500px;
+                transform-style: preserve-3d;
+                width: 100%;
+                max-width: 1400px;
+                margin: 0 auto;
+                padding: 0 2%;
+            }
+            #coverflow > div {
+                transform: 
+                    translateX(var(--tw-translate-x, 0)) 
+                    translateY(0) 
+                    translateZ(var(--tw-translate-z, 0)) 
+                    rotateX(0) 
+                    rotateY(var(--tw-rotate-y, 0)) 
+                    rotateZ(0) 
+                    scaleX(var(--tw-scale, 1)) 
+                    scaleY(var(--tw-scale, 1));
+                transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            #coverflow > div {
+                transition: all 0.7s cubic-bezier(0.3, 0, 0.1, 1);
+                will-change: transform, opacity;
+            }
+            #coverflow > div:not([data-active]) {
+                filter: brightness(0.85);
+            }
+            #coverflow > div[data-active] {
+                z-index: 20;
+                opacity: 1;
+                filter: brightness(1);
+            }
+        </style>
+        
+        <!-- Initialize Carousel with Coverflow Effect -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const carousel = document.querySelector('#coverflow');
+                const items = carousel.querySelectorAll('[data-carousel-item]');
+                const prevButton = document.querySelector('[data-carousel-prev]');
+                const nextButton = document.querySelector('[data-carousel-next]');
+                const dots = document.querySelectorAll('[data-carousel-slide-to]');
+                
+                let currentIndex = 2; // Start with the middle item (index 2)
+                
+                function updateCarousel() {
+                    items.forEach((item, index) => {
+                        let offset = index - currentIndex;
+                    
+                    // Handle infinite loop
+                    if (offset > 2) offset -= items.length;
+                    if (offset < -2) offset += items.length;
+                    
+                    // Calculate positions with increased spacing
+                    const baseTranslateX = 75; // Increased from 60 for more space
+                    const translateX = offset * baseTranslateX + '%';
+                    const translateZ = -Math.abs(offset) * 100 + 'px'; // More depth
+                    const rotateY = offset * 6 + 'deg'; // Reduced rotation for better spacing
+                    const scale = 1 - Math.abs(offset) * 0.15; // Slightly more scaling
+                    
+                    // Adjust opacity based on distance from center
+                    const opacity = 1 - Math.min(Math.abs(offset) * 0.2, 0.6); // More opacity variation
+                        
+                        item.style.setProperty('--tw-translate-x', translateX);
+                        item.style.setProperty('--tw-translate-z', translateZ);
+                        item.style.setProperty('--tw-rotate-y', rotateY);
+                        item.style.setProperty('--tw-scale', scale);
+                        item.style.opacity = opacity;
+                        
+                        // Update active state
+                        item.toggleAttribute('data-active', index === currentIndex);
+                        
+                        // Update dots
+                        dots.forEach((dot, dotIndex) => {
+                            dot.classList.toggle('bg-blue-500', dotIndex === currentIndex);
+                            dot.classList.toggle('bg-gray-300', dotIndex !== currentIndex);
+                            dot.setAttribute('aria-current', dotIndex === currentIndex ? 'true' : 'false');
+                        });
+                    });
+                }
+                
+                function goToSlide(index) {
+                    currentIndex = Math.max(0, Math.min(items.length - 1, index));
+                    updateCarousel();
+                }
+                
+                function nextSlide() {
+                    currentIndex = (currentIndex + 1) % items.length;
+                    updateCarousel();
+                }
+                
+                function prevSlide() {
+                    currentIndex = (currentIndex - 1 + items.length) % items.length;
+                    updateCarousel();
+                }
+                
+                // Event Listeners
+                prevButton.addEventListener('click', prevSlide);
+                nextButton.addEventListener('click', nextSlide);
+                
+                dots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => goToSlide(index));
+                });
+                
+                // Keyboard navigation
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'ArrowLeft') prevSlide();
+                    if (e.key === 'ArrowRight') nextSlide();
+                });
+                
+                // Initialize
+                updateCarousel();
+                
+                // Auto-rotate (optional)
+                setInterval(nextSlide, 3000);
+            });
+        </script>
+
         <div class="flex items-center justify-center w-full transition-opacity opacity-100 duration-750 lg:grow starting:opacity-0">
             <main class="flex max-w-[335px] w-full flex-col-reverse lg:max-w-4xl lg:flex-row">
                 <div class="text-[13px] leading-[20px] flex-1 p-6 pb-12 lg:p-20 bg-white dark:bg-[#161615] dark:text-[#EDEDEC] shadow-[inset_0px_0px_0px_1px_rgba(26,26,0,0.16)] dark:shadow-[inset_0px_0px_0px_1px_#fffaed2d] rounded-bl-lg rounded-br-lg lg:rounded-tl-lg lg:rounded-br-none">
@@ -273,5 +456,7 @@
         @if (Route::has('login'))
             <div class="h-14.5 hidden lg:block"></div>
         @endif
+
+        <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
     </body>
 </html>
