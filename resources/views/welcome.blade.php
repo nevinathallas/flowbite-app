@@ -28,7 +28,7 @@
         <style>
             .hero-section {
                 background-image: url('{{ asset('images/Group 1.svg') }}');
-                background-size: contain;
+                background-size: cover;
                 background-repeat: no-repeat;
             }
             .swiper-coverflow {
@@ -39,7 +39,7 @@
                 background-position: center;
                 background-size: cover;
                 width: 80%;
-                height: 300px;
+                height: 200px;
                 border-radius: 8px;
                 overflow: hidden;
                 box-shadow: 0 4px 20px rgba(0,0,0,0.1);
@@ -47,20 +47,20 @@
             }
             @media (min-width: 640px) {
                 .swiper-slide {
-                    width: 60%;
-                    height: 350px;
+                    width: 70%;
+                    height: 220px;
                 }
             }
             @media (min-width: 1024px) {
                 .swiper-slide {
-                    width: 40%;
-                    height: 400px;
+                    width: 60%;
+                    height: 250px;
                 }
             }
             @media (min-width: 1280px) {
                 .swiper-slide {
-                    width: 30%;
-                    height: 450px;
+                    width: 50%;
+                    height: 280px;
                 }
             }
             .swiper-slide img {
@@ -220,10 +220,10 @@
     </nav>
     <div class="bg-[#C4C4C4] flex flex-col items-center justify-center w-full">
         <!-- Hero Section -->
-        <section class="hero-section h-39 sm:h-64 md:h-96 lg:h-128 xl:h-180 2xl:h-320 w-full fade-in-section flex items-center justify-center transition-opacity opacity-100 duration-750 lg:grow starting:opacity-0">
-            <main class="flex w-full flex-col-reverse lg:flex-row">
+        <section class="hero-section h-39 sm:h-64 md:h-96 lg:h-128 xl:h-180 2xl:h-320 w-full fade-in-section flex items-center justify-center transition-opacity opacity-100 duration-750 starting:opacity-0">
+            <main class="flex w-full lg:flex-row">
                 <div class="flex flex-col items-center justify-center w-full">
-                    <img src="{{ asset('images/quote hero-03 1.svg') }}" alt="Hero Image" class="h-10 w-auto md:h-18 lg:h-32 xl:h-40 2xl:h-48 object-cover">
+                    <img src="{{ asset('images/quote hero-03 1.svg') }}" alt="Hero Image" class="h-10 w-auto sm:h-14 md:h-18 lg:h-32 xl:h-36 object-cover">
                 </div>
             </main>
         </section>
@@ -361,7 +361,7 @@
                         rotate: 0,
                         stretch: 0,
                         depth: 0,
-                        modifier: 2.5,
+                        modifier: 2,
                         slideShadows: false,
                     },
                     breakpoints: {
@@ -416,12 +416,54 @@
                     },
                     // Preview Setting
                     slidesPerView: 'auto',
+                    spaceBetween: 0,     // No space between slides
+                    centeredSlides: true,  // Keep active slide centered
                     coverflowEffect: {
-                        rotate: 50,
-                        stretch: 0,
-                        depth: 100,
-                        modifier: -0.5,
-                        slideShadows: true,
+                        rotate: 0,          // No rotation
+                        stretch: 0,         // No stretch
+                        depth: 2,           // No 3D effect
+                        modifier: 1,        // Default modifier
+                        slideShadows: false, // No shadows
+                    },
+                    // Adjust slide width to show partial preview of next/prev slides
+                    breakpoints: {
+                        320: {
+                            slidesPerView: 1.2,
+                            spaceBetween: 1,
+                        },
+                        640: {
+                            slidesPerView: 1.5,
+                            spaceBetween: 1,
+                        },
+                        1024: {
+                            slidesPerView: 2.2,
+                            spaceBetween: 2,
+                        },
+                        1280: {
+                            slidesPerView: 2.8,
+                            spaceBetween: 2,
+                        }
+                    },
+                    // Add fade effect for slides
+                    fadeEffect: {
+                        crossFade: true
+                    },
+                    // Add opacity to non-active slides
+                    on: {
+                        setTransition: function(swiper, duration) {
+                            for (let i = 0; i < swiper.slides.length; i++) {
+                                const slide = swiper.slides[i];
+                                slide.style.opacity = '0.4';
+                                slide.style.transition = 'opacity ' + duration + 'ms';
+                            }
+                            swiper.slides[swiper.activeIndex].style.opacity = '1';
+                        },
+                        slideChange: function() {
+                            for (let i = 0; i < this.slides.length; i++) {
+                                this.slides[i].style.opacity = '0.4';
+                            }
+                            this.slides[this.activeIndex].style.opacity = '1';
+                        }
                     },
                     pagination: {
                         el: '.swiper-pagination',
@@ -439,15 +481,15 @@
                     breakpoints: {
                         640: {
                             slidesPerView: 1,
-                            spaceBetween: 20,
+                            spaceBetween: 2,
                         },
                         768: {
                             slidesPerView: 2,
-                            spaceBetween: 30,
+                            spaceBetween: 2,
                         },
                         1024: {
                             slidesPerView: 3,
-                            spaceBetween: 40,
+                            spaceBetween: 2,
                         },
                     }
                 });
