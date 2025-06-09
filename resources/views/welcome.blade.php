@@ -207,7 +207,7 @@
         </div>
 
         <!-- Mobile menu, show/hide based on menu state. -->
-        <div class="sm:hidden" id="mobile-menu">
+        <div class="sm:hidden hidden" id="mobile-menu">
             <div class="space-y-1 px-2 pt-2 pb-3">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
             <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-700 hover:text-white">Home</a>
@@ -482,5 +482,24 @@
             });
         });
     </script>
-    </body>
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu"]');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuOpenIcon = mobileMenuButton.querySelector('.block');
+        const menuCloseIcon = mobileMenuButton.querySelector('.hidden');
+
+        mobileMenuButton.addEventListener('click', () => {
+            const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+            
+            mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.classList.toggle('hidden');
+            
+            // Toggle icons
+            menuOpenIcon.classList.toggle('block');
+            menuOpenIcon.classList.toggle('hidden');
+            menuCloseIcon.classList.toggle('block');
+            menuCloseIcon.classList.toggle('hidden');
+        });
+    </script>
 </html>
