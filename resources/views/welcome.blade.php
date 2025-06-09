@@ -218,12 +218,12 @@
             </div>
         </div>
     </nav>
-    <div class="bg-[#C4C4C4] flex flex-col items-center justify-center w-full p-0 flex-grow">
+    <div class="bg-[#C4C4C4] flex flex-col items-center justify-center w-full">
         <!-- Hero Section -->
-        <section class="hero-section h-screen md:h-96 lg:h-128 xl:h-180 2xl:min-h-screen w-full fade-in-section flex items-center justify-center transition-opacity opacity-100 duration-750 lg:grow starting:opacity-0">
-            <main class="flex max-w-[335px] w-full flex-col-reverse lg:max-w-4xl lg:flex-row">
-                <div class="flex flex-col items-center justify-center w-full h-full">
-                    <img src="{{ asset('images/quote hero-03 1.svg') }}" alt="Hero Image" class="w-full h-full object-cover">
+        <section class="hero-section h-39 sm:h-64 md:h-96 lg:h-128 xl:h-180 2xl:h-320 w-full fade-in-section flex items-center justify-center transition-opacity opacity-100 duration-750 lg:grow starting:opacity-0">
+            <main class="flex w-full flex-col-reverse lg:flex-row">
+                <div class="flex flex-col items-center justify-center w-full">
+                    <img src="{{ asset('images/quote hero-03 1.svg') }}" alt="Hero Image" class="h-10 w-auto md:h-18 lg:h-32 xl:h-40 2xl:h-48 object-cover">
                 </div>
             </main>
         </section>
