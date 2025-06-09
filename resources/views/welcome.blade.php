@@ -186,7 +186,7 @@
                 </nav>
             @endif
         </header>
-        <div class="fade-in-section flex items-center justify-center w-full transition-opacity opacity-100 duration-750 lg:grow starting:opacity-0 min-h-screen">
+        <div class="fade-in-section flex items-center justify-center mb-16 md:mb-20 w-full transition-opacity opacity-100 duration-750 lg:grow starting:opacity-0 h-auto md:h-auto lg:min-h-screen">
             <main class="flex max-w-[335px] w-full flex-col-reverse lg:max-w-4xl lg:flex-row">
                 <div class="text-[13px] leading-[20px] flex-1 p-6 pb-12 lg:p-20 bg-white dark:bg-[#161615] dark:text-[#EDEDEC] shadow-[inset_0px_0px_0px_1px_rgba(26,26,0,0.16)] dark:shadow-[inset_0px_0px_0px_1px_#fffaed2d] rounded-bl-lg rounded-br-lg lg:rounded-tl-lg lg:rounded-br-none">
                     <h1 class="mb-1 font-medium">Let's get started</h1>
@@ -408,7 +408,64 @@
         </div>
 
         <!-- Coverflow Carousel Section -->
-        <section class="fade-in-section py-8 md:py-12 lg:py-16 bg-gray-100 dark:bg-gray-800 overflow-hidden min-h-screen">
+        <section class="fade-in-section mb-16 py-8 md:mb-20 md:py-12 lg:mb-24 lg:py-16 bg-gray-100 dark:bg-gray-800 overflow-hidden h-sm md:h-md lg:h-lg">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-6 sm:mb-10 lg:mb-12 dark:text-white">
+                    Portfolio Gallery
+                </h2>
+                
+                <!-- Swiper -->
+                <div class="relative">
+                    <div class="swiper swiper-coverflow">
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <img src="https://th.bing.com/th/id/OIP.HTTJ81sqVrilLkU1kMVOzAHaEK?rs=1&pid=ImgDetMain" alt="Nature" class="w-full h-full object-cover">
+                                <div class="slide-content">
+                                    <h3 class="slide-title">Beautiful Nature</h3>
+                                    <p class="slide-desc">Explore the beauty of nature</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://wallpaperaccess.com/full/1321480.jpg" alt="City" class="w-full h-full object-cover">
+                                <div class="slide-content">
+                                    <h3 class="slide-title">Urban Life</h3>
+                                    <p class="slide-desc">Experience the city vibes</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://wallpaperaccess.com/full/2749338.jpg" alt="Technology" class="w-full h-full object-cover">
+                                <div class="slide-content">
+                                    <h3 class="slide-title">Modern Tech</h3>
+                                    <p class="slide-desc">Latest in technology</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://wallpapercave.com/wp/wp3819435.jpg" alt="Food" class="w-full h-full object-cover">
+                                <div class="slide-content">
+                                    <h3 class="slide-title">Delicious Food</h3>
+                                    <p class="slide-desc">Taste the difference</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://th.bing.com/th/id/R.185a4025b2426d2bdb69aac4c2a9e1fe?rik=dFrCXif7Gi87Hw&riu=http%3a%2f%2fthewowstyle.com%2fwp-content%2fuploads%2f2015%2f02%2f6966828-beautiful-mountain-lakes.jpg&ehk=%2bg%2bVQ5VbliISAtOpOXMF0kQcE9UuTuxx58zhi69EO4k%3d&risl=&pid=ImgRaw&r=0" alt="Travel" class="w-full h-full object-cover">
+                                <div class="slide-content">
+                                    <h3 class="slide-title">Travel More</h3>
+                                    <p class="slide-desc">Discover new places</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Navigation buttons -->
+                        <div class="swiper-button-next hidden md:flex"></div>
+                        <div class="swiper-button-prev hidden md:flex"></div>
+                        <!-- Pagination -->
+                        <div class="swiper-pagination mt-4"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="fade-in-section mb-16 py-8 md:mb-20 md:py-12 lg:mb-24 lg:py-16 bg-gray-100 dark:bg-gray-800 overflow-hidden h-sm md:h-md lg:h-lg">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-6 sm:mb-10 lg:mb-12 dark:text-white">
                     Portfolio Gallery
